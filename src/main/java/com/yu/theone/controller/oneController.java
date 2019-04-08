@@ -19,7 +19,7 @@ import java.util.List;
 @RequestMapping("/yu")
 public class oneController {
 
-    @RequestMapping("/t")
+    @RequestMapping("/te")
     public String test(){
         return new theUser().toString();
     }
