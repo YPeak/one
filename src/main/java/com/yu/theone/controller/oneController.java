@@ -1,6 +1,9 @@
 package com.yu.theone.controller;
 
 import com.yu.theone.entity.theUser;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,9 +20,12 @@ import java.util.List;
 @RestController
 @ResponseBody
 @RequestMapping("/yu")
+@Api(tags = "类标识1",value = "类标识2")
 public class oneController {
 
-    @RequestMapping("/te")
+//    @RequestMapping("/te")// 如果用swagger2 用@RequestMapping注解 ，默认所有请求通用，改成GetMapping或者PutMapping即可
+    @GetMapping("/te")
+    @ApiOperation(value = "方法标识" ,notes = "方法描述")
     public String test(){
         return new theUser().toString();
     }
