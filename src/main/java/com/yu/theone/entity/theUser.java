@@ -12,13 +12,4 @@ public class theUser {
     private String age;
     private String address;
 
-
-    @Override
-    public String toString() {
-        return "theUser{" +
-                "name='" + name + '\'' +
-                ", age='" + age + '\'' +
-                ", address='" + address + '\'' +
-                '}';
-    }
 }
