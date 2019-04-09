@@ -1,8 +1,10 @@
 package com.yu.theone.controller;
 
 import com.yu.theone.entity.theUser;
+import com.yu.theone.service.TestAService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,6 +29,7 @@ public class oneController {
     @GetMapping("/te")
     @ApiOperation(value = "方法标识" ,notes = "方法描述")
     public String test(){
+        System.out.println(TestAService.testA());
         return new theUser().toString();
     }
 
@@ -47,4 +50,7 @@ public class oneController {
         System.out.println(list2);
         System.out.println();
     }
+
+    @Autowired
+    TestAService TestAService;
 }

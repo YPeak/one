@@ -1,0 +1,26 @@
+#服务端口
+server:
+  port: 8080
+
+#数据源
+spring:
+  datasource:
+    username: root
+    password: tiger
+#    解决时区问题
+    url: jdbc:mysql://127.0.0.1:3306/shaoqing?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+#    url: jdbc:mysql://127.0.0.1:3306/shaoqing?characterEncoding=utf-8
+    driver-class-name:  com.mysql.cj.jdbc.Driver
+#    下边这个版本过低 注意和jar相匹配
+#    driver-class-name:  com.mysql.jdbc.Driver
+
+#mybatis:
+#  mapper-locations: classpath:mapping/*Mapper.xml
+#  type-aliases-package: com.example.entity
+#
+#showSql
+#logging:
+#  level:
+#    com:
+#      example:
+#        mapper : debug
