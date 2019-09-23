@@ -1,6 +1,6 @@
 package com.yu.theone.controller;
 
-import com.yu.theone.entity.theUser;
+import com.yu.theone.entity.TheUser;
 import com.yu.theone.service.TestAService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -30,7 +30,7 @@ public class oneController {
     @ApiOperation(value = "方法标识" ,notes = "方法描述")
     public String test(){
         System.out.println(TestAService.testA());
-        return new theUser().toString();
+        return new TheUser().toString();
     }
 
     public static void main(String[] args) {

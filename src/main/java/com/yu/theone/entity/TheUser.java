@@ -1,5 +1,6 @@
 package com.yu.theone.entity;
 
+import com.yu.theone.annotation.CheckAge;
 import lombok.Data;
 
 /**
@@ -7,9 +8,10 @@ import lombok.Data;
  * on 2019/4/4.
  */
 @Data
-public class theUser {
+public class TheUser {
     private String name;
-    private String age;
+    @CheckAge
+    private int age;
     private String address;
 
 }
