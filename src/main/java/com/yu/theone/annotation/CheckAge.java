@@ -12,6 +12,7 @@ import java.lang.annotation.Target;
 /**
  * Created by shuwei.yu.
  * on 2019/4/4.
+ * https://www.cnblogs.com/codeingthink/p/9237825.html  spring 常用注解
  */
 @Target({ ElementType.FIELD, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
