@@ -10,7 +10,7 @@ import lombok.Data;
 @Data
 public class TheUser {
     private String name;
-    @CheckAge
+    @CheckAge(message = "年龄不能小于18呀")
     private int age;
     private String address;
 
