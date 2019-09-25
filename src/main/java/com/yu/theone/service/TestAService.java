@@ -13,7 +13,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class TestAService {
 
-    public String testA(){
+    public String testA() throws Exception {
+        if(false){
+            throw new Exception("11");
+        }
         log.info("12");
         String aa = testInterface.testIA("1234");
         System.out.println("service层方法:"+aa);
