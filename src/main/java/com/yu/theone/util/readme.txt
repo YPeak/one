@@ -14,3 +14,6 @@ $return$
  * @Author: shuWei.yu
  * @date: $date$
 */
+
+
+缩略图插件：CodeGlance  可在官网下载
