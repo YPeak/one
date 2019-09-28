@@ -1,17 +1,21 @@
 package com.yu.theone.service;
 
+import com.yu.theone.entity.TheUser;
 import com.yu.theone.mapper.TestInterface;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
+import org.springframework.validation.Errors;
 
 /**
- * Created by shuwei.yu.
- * on 2019/4/9.
- */
+ * @Description:
+ * @Author: shuWei.yu
+ * @date: 2019/9/28 0028
+*/
 @Slf4j
 @Service
-public class TestAService {
+public class TestService {
 
     public String testA() throws Exception {
         if(false){
@@ -22,6 +26,19 @@ public class TestAService {
         System.out.println("service层方法:"+aa);
         return "打印";
     }
+
+    public String testB(TheUser theUser , Errors errors)  {
+
+
+        return "";
+    }
+
+    private TestInterface testInterface;
+
     @Autowired
-    TestInterface testInterface;
+    private TestService(TestInterface testInterface){
+        this.testInterface = testInterface;
+
+    }
+
 }
