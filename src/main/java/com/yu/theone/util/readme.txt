@@ -17,3 +17,5 @@ $return$
 
 
 缩略图插件：CodeGlance  可在官网下载
+
+生成pdf

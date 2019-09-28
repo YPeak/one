@@ -1,11 +1,23 @@
 package com.yu.theone;
 
+import org.mapstruct.Mapper;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScans;
 
+/**
+ * @Description:
+ * @Author: shuWei.yu
+ * @date: 2019/9/29 0029
+ *
+ * 制定mapper范围
+ * @MapperScan("com.yu.throne")
+*/
 @SpringBootApplication
-//@ComponentScan("")
+//@ComponentScan("asdf")
+@MapperScan("com.yu.theone")
 public class TheOneApplication {
 
 	public static void main(String[] args) {

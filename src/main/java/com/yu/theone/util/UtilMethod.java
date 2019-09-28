@@ -1,6 +1,7 @@
 package com.yu.theone.util;
 
 import org.springframework.validation.Errors;
+import org.springframework.validation.ObjectError;
 
 /**
 *@Description: 公共方法
@@ -45,7 +46,10 @@ public class UtilMethod {
     public static String getAnnotationErrors(Errors errors){
         String errorMsg = "";
         if(errors.hasErrors()){
-
+            for (ObjectError objectError:errors.getAllErrors()) {
+                errorMsg +=  "；"+objectError.getDefaultMessage();
+            }
+            return errorMsg.substring(1);
         }
         return errorMsg;
 
