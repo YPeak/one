@@ -4,6 +4,7 @@ package com.yu.theone.entity;
 import com.yu.theone.annotation.CheckAge;
 import lombok.Data;
 
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 
@@ -20,7 +21,7 @@ import javax.validation.constraints.NotNull;
 //@RequiredArgsConstructor
 public class TheUser {
     private static final String aa = "1";
-    @NotNull
+    @NotEmpty(message = "姓名不能为空")
     private String name;
     @CheckAge
     private int age;

@@ -36,7 +36,7 @@ public class TestService {
     public String testB(TheUser theUser , Errors errors)  {
 
         String errorMsg = UtilMethod.getAnnotationErrors(errors);
-        return UtilMethod.notEmpty(errorMsg)?testAnnotationMapper.testAnnotationMethod("2"):errorMsg;
+        return UtilMethod.notEmpty(errorMsg)?errorMsg : testAnnotationMapper.testAnnotationMethod("2");
     }
 
     private TestAnnotationMapper testAnnotationMapper;
