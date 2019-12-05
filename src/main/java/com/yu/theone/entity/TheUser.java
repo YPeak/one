@@ -5,7 +5,7 @@ import com.yu.theone.annotation.CheckAge;
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 
 
 /**
@@ -26,5 +26,6 @@ public class TheUser {
     @CheckAge
     private int age;
     private String address;
+    private LocalDate today;
 
 }
