@@ -20,7 +20,7 @@ public  class TestEntity {
         String aa = "0.1132";
         String cc = "0.1133";
         double bb = Double.valueOf(aa);
-        double ee = Double.valueOf(cc); 
+        double ee = Double.valueOf(cc);
         System.out.println(bb+ee);
 
         double c1 = 0.1132;
@@ -36,6 +36,7 @@ public  class TestEntity {
     }
 
     private static void changeSomething(){
+//        JSONObject.fromObject("");
 
         age = "122";
     }

@@ -9,10 +9,7 @@ import org.apache.ibatis.annotations.Select;
 import org.mapstruct.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.Assert;
 import org.springframework.validation.Errors;
-
-import javax.validation.constraints.Past;
 
 /**
  * @Description:
@@ -28,9 +25,9 @@ public class TestService {
             throw new Exception("11");
         }
         log.info("12");
-        String aa = testInterface.testIA("1234");
-        System.out.println("service层方法:"+aa);
-        return "打印";
+        String aa = testInterface.testIA("1");
+        log.info("service层方法:"+aa);
+        return aa;
     }
 
     public String testB(TheUser theUser , Errors errors)  {

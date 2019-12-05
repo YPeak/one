@@ -1,6 +1,5 @@
 package com.yu.theone.controller;
 
-import com.yu.theone.entity.TheUser;
 import com.yu.theone.service.TestService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -35,8 +34,7 @@ public class oneController {
             @ApiImplicitParam(name = "type",value = "XX类型",required = true,paramType = "query")
     })
     public String test(@RequestParam("type") String type)  {
-        System.out.println(TestAService.testA());
-        return new TheUser().toString();
+        return TestAService.testA();
     }
 
     public static void main(String[] args) {
