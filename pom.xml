@@ -22,6 +22,69 @@
 
 	<dependencies>
 
+		<!--aop依赖start-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.9.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.9.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>4.3.9.BUILD-SNAPSHOT</version>
+		</dependency>
+		<!--aop依赖end-->
+
+		<!--如果-->
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+
+		<!--<dependency>-->
+			<!--<groupId>com.fasterxml.jackson.core</groupId>-->
+			<!--<artifactId>jackson-core</artifactId>-->
+			<!--<version>2.7.4</version>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash; jackson注解包，可选，提供注解功能 &ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>com.fasterxml.jackson.core</groupId>-->
+			<!--<artifactId>jackson-annotations</artifactId>-->
+			<!--<version>2.7.4</version>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash; jackson数据绑定包，可选，提供基于“对象绑定”和“树模型”相关API &ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>com.fasterxml.jackson.core</groupId>-->
+			<!--<artifactId>jackson-databind</artifactId>-->
+			<!--<version>2.7.4</version>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash; 引入gson依赖 &ndash;&gt;-->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.6.2</version>
+		</dependency>
 
 		<!--lombok工具依赖-->
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
@@ -31,26 +94,6 @@
 			<version>1.16.20</version>
 			<scope>provided</scope>
 		</dependency>
-
-		<!--log4j-->
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-web</artifactId>-->
-			<!--<exclusions>-->
-				<!--<exclusion>-->
-					<!--<groupId>org.springframework.boot</groupId>-->
-					<!--<artifactId>spring-boot-starter-logging</artifactId>-->
-				<!--</exclusion>-->
-			<!--</exclusions>-->
-
-		<!--</dependency>-->
-
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-log4j</artifactId>-->
-
-		<!--</dependency>-->
-
 
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
