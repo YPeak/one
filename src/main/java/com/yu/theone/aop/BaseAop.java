@@ -27,7 +27,7 @@ public class BaseAop {
      */
     @Before("webLog()")
     public void doBefore(JoinPoint joinPoint) {
-        // 接收到请求，记录请求内容
+        // 接收到请求，记录请求内容 t
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
 
