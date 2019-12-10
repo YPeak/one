@@ -1,6 +1,8 @@
 package com.yu.theone.service;
 
 import com.yu.theone.entity.TheUser;
+import com.yu.theone.entity.User;
+import com.yu.theone.interfaceT.UserRepository;
 import com.yu.theone.mapper.TestInterface;
 import com.yu.theone.util.UtilMethod;
 import lombok.extern.slf4j.Slf4j;
@@ -21,11 +23,13 @@ import org.springframework.validation.Errors;
 public class TestService {
 
     public String testA() throws Exception {
+        User asdf = userRepository.findByUserName("小黑");
+        System.out.println(asdf);
         if(false){
             throw new Exception("11");
         }
         log.info("12");
-        String aa = testInterface.testIA("1");
+        String aa = testInterface.testIA("2");
         log.info("service层方法:"+aa);
         return aa;
     }
@@ -38,11 +42,13 @@ public class TestService {
 
     private TestAnnotationMapper testAnnotationMapper;
     private TestInterface testInterface;
+    private UserRepository userRepository;
 
     @Autowired
-    private TestService(TestAnnotationMapper testAnnotationMapper,TestInterface testInterface){
+    private TestService(TestAnnotationMapper testAnnotationMapper, TestInterface testInterface, UserRepository userRepository){
         this.testAnnotationMapper = testAnnotationMapper;
         this.testInterface = testInterface;
+        this.userRepository = userRepository;
 
     }
 

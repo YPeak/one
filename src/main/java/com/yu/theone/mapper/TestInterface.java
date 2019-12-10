@@ -11,7 +11,7 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface TestInterface {
 
-    @Select("select a.id from user a where a.name = #{name}")
+    @Select("select a.id from testyu a where a.name = #{name}")
     String testIA(@Param("name") String name);
 
 }

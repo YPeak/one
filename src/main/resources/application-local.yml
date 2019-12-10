@@ -13,7 +13,13 @@ spring:
     driver-class-name:  com.mysql.cj.jdbc.Driver
 #    下边这个版本过低 注意和jar相匹配
 #    driver-class-name:  com.mysql.jdbc.Driver
-
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+  main:
+    allow-bean-definition-overriding: true
 #mybatis:
 #  mapper-locations: classpath:mapping/*Mapper.xml
 #  type-aliases-package: com.example.entity
