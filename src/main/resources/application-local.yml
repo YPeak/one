@@ -15,11 +15,14 @@ spring:
 #    driver-class-name:  com.mysql.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     show-sql: true
     open-in-view: false
+#    设置方言
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   main:
     allow-bean-definition-overriding: true
+
 #mybatis:
 #  mapper-locations: classpath:mapping/*Mapper.xml
 #  type-aliases-package: com.example.entity

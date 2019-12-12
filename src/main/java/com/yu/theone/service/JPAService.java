@@ -15,7 +15,7 @@ public class JPAService {
 
     @Transactional(value = "transactionManager",rollbackFor=Exception.class)
     public void save(){
-        testJPARepository.save(new TestJPA("321","1"));
+        testJPARepository.save(new TestJPA("321","1","212"));
     }
 
 
