@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class TestServiceTest {
 
     @Autowired
-    TestService testService;
+    JPAService jpaService;
 
     @Before
     public void befor(){
@@ -26,7 +26,7 @@ public class TestServiceTest {
 
     @Test
     public void testA() throws Exception {
-        testService.testA();
+        jpaService.save();
     }
 
     @Test

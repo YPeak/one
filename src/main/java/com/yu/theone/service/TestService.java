@@ -1,8 +1,7 @@
 package com.yu.theone.service;
 
 import com.yu.theone.entity.TheUser;
-import com.yu.theone.entity.User;
-import com.yu.theone.interfaceT.UserRepository;
+import com.yu.theone.interfaceT.TestJPARepository;
 import com.yu.theone.mapper.TestInterface;
 import com.yu.theone.util.UtilMethod;
 import lombok.extern.slf4j.Slf4j;
@@ -13,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.Errors;
 
+
+
 /**
  * @Description:
  * @Author: shuWei.yu
@@ -22,9 +23,10 @@ import org.springframework.validation.Errors;
 @Service
 public class TestService {
 
+
+//    @Transactional(transactionManager = "jpa" ,rollbackFor=Exception.class)
     public String testA() throws Exception {
-        User asdf = userRepository.findByUserName("小黑");
-        System.out.println(asdf);
+//        testJPARepository.save(new TestJPA("2","1"));
         if(false){
             throw new Exception("11");
         }
@@ -42,13 +44,12 @@ public class TestService {
 
     private TestAnnotationMapper testAnnotationMapper;
     private TestInterface testInterface;
-    private UserRepository userRepository;
+    private TestJPARepository testJPARepository;
 
     @Autowired
-    private TestService(TestAnnotationMapper testAnnotationMapper, TestInterface testInterface, UserRepository userRepository){
+    private TestService(TestAnnotationMapper testAnnotationMapper, TestInterface testInterface){
         this.testAnnotationMapper = testAnnotationMapper;
         this.testInterface = testInterface;
-        this.userRepository = userRepository;
 
     }
 
